@@ -35,6 +35,12 @@ const App = () => {
     }
   }
 
+
+  const restart = () => {
+    setBoard()
+  }
+
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -47,9 +53,11 @@ const App = () => {
             index={index}
             handleGamePlay={handleGamePlay}
           />
-          
           )
       })}
+      </div>
+      <div className="restart">
+      <input type="button" value="Play Again" onClick={restart}/>
       </div>
     </>
   )
